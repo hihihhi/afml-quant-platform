@@ -1,0 +1,50 @@
+name: Verify AFML harness
+on:
+  push:
+    paths:
+      - 'system/**'
+      - 'instructions/**'
+      - '.github/workflows/verify.yml'
+      - 'AGENTS.md'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  harness:
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[bootstrap]') }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check whether publication is materialized
+        id: state
+        run: |
+          if test -f instructions/tools/public_audit.py; then echo 'ready=true' >> "$GITHUB_OUTPUT"; else echo 'ready=false' >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/setup-python@v5
+        if: steps.state.outputs.ready == 'true'
+        with:
+          python-version: '3.11'
+      - name: Install tooling dependencies
+        if: steps.state.outputs.ready == 'true'
+        run: python -m pip install -r instructions/requirements-dev.txt
+      - name: Run harness and public-integrity checks
+        if: steps.state.outputs.ready == 'true'
+        run: |
+          python -m unittest discover -s instructions/tests -v
+          python instructions/tools/public_audit.py --tracked-only
+      - name: Publication pending
+        if: steps.state.outputs.ready != 'true'
+        run: echo 'Publication is not materialized yet. This is NOT a passed source or implementation review.'
+  native:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        compiler: [g++, clang++]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test native scaffold when present
+        run: |
+          if ! test -f system/CMakeLists.txt; then echo 'Native publication pending; no native test result.'; exit 0; fi
+          cmake -S system -B build/native -DCMAKE_CXX_COMPILER=${{ matrix.compiler }} -DAFML_ENABLE_SANITIZERS=ON -DCMAKE_BUILD_TYPE=Debug
+          cmake --build build/native --parallel 2
+          ctest --test-dir build/native --output-on-failure
