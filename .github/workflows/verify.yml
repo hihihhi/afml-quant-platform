@@ -15,7 +15,6 @@ concurrency:
 
 jobs:
   public-harness:
-    if: "!contains(github.event.head_commit.message, '[bootstrap]')"
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
@@ -38,7 +37,6 @@ jobs:
       - name: Document verification boundary
         run: echo 'Public metadata, requirement locks, regression tests and deterministic regeneration only. The licensed book is absent; no private Word/pixel or independent semantic/mathematical approval is claimed.' >> "$GITHUB_STEP_SUMMARY"
   native:
-    if: "!contains(github.event.head_commit.message, '[bootstrap]')"
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     strategy:

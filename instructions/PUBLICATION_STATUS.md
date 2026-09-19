@@ -1,15 +1,26 @@
-# Publication status
+# GitHub publication status — 2026-09-19
 
-The user has requested completion of the AFML book-first agent harness through this GitHub repository.
+**The public harness is published.** Repository: `hihihhi/afml-quant-platform`.
 
-## Boundaries
+The full source-free file tree was committed as
+`4e450d3311f911b3d82811d6d5eafc7b38884368`, after GitHub Actions run
+[35412630338](https://github.com/hihihhi/afml-quant-platform/actions/runs/35412630338)
+successfully verified the payload, regenerated all 1,138 task Markdown files,
+ran 18 Python regression tests, audited the public files, and built/tested the
+C++ scaffold with GCC and with Clang address/undefined-behavior sanitizers.
+Both native configurations ran four CTest cases.
 
-- `system/` is the implementation and reference-code root.
-- `instructions/` is the requirements, source-provenance, book-ordered task, review and engineering-policy root.
-- The user-supplied EPUB, complete Word transcription, source images, verbatim source paragraphs and full-source task packets must remain local and excluded from this public repository.
-- Source preservation, generated task coverage, semantic review, mathematical validation, native correctness and performance are separate acceptance gates.
-- Do not describe an unfinished publication, skipped private-source test, scaffold or generated checklist as a completed trading platform.
+The import record is [archived here](reports/github-publication-import.json).
+The temporary write-enabled importer and its bootstrap CI bypass were removed
+after the successful import. The regular workflow now requires actual files and
+runs checks on every main-branch push and pull request. A skipped workflow is not
+a passed test. Later CI results must be read from the run for the relevant commit.
 
-## Current stage
+## What publication does not certify
 
-Publication preparation is in progress. This file alone is not the project delivery. The initial local source-preservation audit was rerun with 71 structural checks passing; this is not semantic or mathematical approval. The full public file tree and remote CI results require their own verification.
+This is a source-locator/task harness and a non-trading C++ scaffold, not a
+completed quantitative trading platform. Generated task coverage does not prove
+semantic, mathematical, algorithmic or performance correctness. Independent
+semantic and mathematical approvals remain unrecorded. The book, full Word
+transcription, source images, extracted paragraphs and complete chapter packets
+remain private and are not included in this public repository.

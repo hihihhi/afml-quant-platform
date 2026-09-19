@@ -1,44 +1,49 @@
 # Current status — 2026-09-19
 
-## Implemented and locally verified
+## Published and verified
 
-The public source-locator projection has 1,138 generated task Markdown files and
-retains all task IDs from the complete local extraction. It preserves the two
-working roots, original prompt locks, 29 requirement IDs, review-record validation,
-source installation, private context packets and C++20 non-trading scaffold.
+The public GitHub harness contains 1,138 generated source-ordered task Markdown
+files: 369 chapter/section tasks, 653 equation-image tasks, 100 snippet tasks and
+16 ancillary-document tasks. It preserves the uploaded edition's 22 chapters and
+280 numbered sections, the two working roots, the complete original prompts,
+29 requirement IDs, prompt hashes, review validation and private task packets.
 
-Public projection tests: 18 passed. Public integrity and exact task regeneration
-passed. The 1,138 locators were checked against the exact uploaded EPUB across all
-38 source documents. None of these results approves the semantic interpretation
-of every word or the mathematics. Native GCC and Clang/sanitizer test evidence is
-reported separately from public task tests.
+The full tree was published in commit
+`4e450d3311f911b3d82811d6d5eafc7b38884368`. GitHub Actions
+[run 35412630338](https://github.com/hihihhi/afml-quant-platform/actions/runs/35412630338)
+completed successfully: 18 public-harness Python tests, public integrity auditing,
+exact Markdown regeneration, four GCC CTest cases and four Clang CTest cases
+with address/undefined-behavior sanitizers. These are checks of the harness and
+non-trading C++20 scaffold, not completed financial algorithms.
 
-The complete local working package additionally retained the full EPUB, a Word
-transcription and detailed byte/pixel catalogs. Earlier in this continuation its
-full source/Word audit passed 72 checks; 58 harness tests and 4 tests under each of
-GCC and Clang/sanitizers passed. Those results are for that exact local package,
-not invented remote runs or an assertion that the smaller public test suite has
-58 tests. The public locator view has its own generator, catalog lock and checks.
+Locally, all 1,138 source locators were compared against the exact uploaded EPUB
+across all 38 reading-order documents. Source installation using the actual EPUB
+and Word file, followed by generation of CH-01's private context packet, also
+succeeded. Public CI has no licensed book and does not repeat private Word/pixel
+checks. The earlier full local package has separate source/Word verification
+reports; its larger test suite is not the 18-test public suite.
 
 ## Outstanding — do not mark complete
 
-- Independent word-by-word semantic approval: zero recorded.
-- Independent mathematical approval: zero recorded.
-- Editable transcription and verification of all formula/code images, every
-  ordinary inline expression, derivations, assumptions and numerical oracles.
-- Fully implementation-ready specifications and book-faithful algorithms, followed
-  by verified native implementations and benchmark evidence.
+- Independent word-by-word semantic approval and mathematical approval: zero
+  recorded. Source-preservation and generated-coverage checks are not substitutes.
+- Editable transcription and verification of all formula/code images, ordinary
+  inline expressions, assumptions, derivations and numerical oracles.
+- Fully implementation-ready specifications and book-faithful algorithms,
+  followed by verified native implementations and measured benchmarks.
 - Actual ingestion, cleansing, compressed storage/access, feature/model pipelines,
-  all backtesting paradigms, execution, plug-ins/hot swapping, market hierarchy and UI.
-- Production latency, durability, throughput and numerical-error demonstrations.
-
-The existing GitHub repository is public. Source material remains private. Remote
-publication and CI must be established from actual commits and workflow runs;
-this static status file is not evidence that a run has completed.
+  all backtesting paradigms, execution, plug-ins/hot swapping, market hierarchy
+  and UI. Their requirements remain recorded, not silently dropped.
+- Demonstrations of latency, durability, throughput and numerical accuracy.
 
 ## Next source-ordered work
 
-Generate CH-01's private packet; compare its complete document and all child tasks
-in source order. Preserve the book's wording and qualifiers. Record proposed
-corrections separately; an exact covariance counterexample under ERR-0001 does
-not authorize changing the original or marking unrelated chapters complete.
+Use `python instructions/tools/build_task_context.py CH-01` after privately
+installing the source. Review the complete chapter and its child tasks in source
+order. Authored review notes and proposed corrections must be kept separate from
+the original, with explicit scope and unchecked independent approval gates.
+The exact covariance counterexample in ERR-0001 does not authorize changing the
+original text or approving any unrelated chapter.
+
+No live trades, broker access, deployment, visibility changes or history rewrites
+have been performed. The repository is public; source-containing files stay local.
