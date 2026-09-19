@@ -1,0 +1,14 @@
+Internal ctest changing into directory: /mnt/data/afml-github-view/build/gcc
+Test project /mnt/data/afml-github-view/build/gcc
+    Start 1: status_contract
+1/4 Test #1: status_contract ..................   Passed    0.00 sec
+    Start 2: cli_status
+2/4 Test #2: cli_status .......................   Passed    0.00 sec
+    Start 3: rejects_live_trading
+3/4 Test #3: rejects_live_trading .............   Passed    0.00 sec
+    Start 4: rejects_backtest_claim
+4/4 Test #4: rejects_backtest_claim ...........   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.01 sec

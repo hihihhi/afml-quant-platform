@@ -1,0 +1,23 @@
+test_covariance_entries (test_public_view.NumericalOracleTests.test_covariance_entries) ... ok
+test_exact_counterexample (test_public_view.NumericalOracleTests.test_exact_counterexample) ... ok
+test_float_rejection (test_public_view.NumericalOracleTests.test_float_rejection) ... ok
+test_invalid_shape (test_public_view.NumericalOracleTests.test_invalid_shape) ... ok
+test_pivot_and_singular (test_public_view.NumericalOracleTests.test_pivot_and_singular) ... ok
+test_book_cannot_be_published (test_public_view.PublicViewTests.test_book_cannot_be_published) ... ok
+test_catalog_tampering (test_public_view.PublicViewTests.test_catalog_tampering) ... ok
+test_changed_task (test_public_view.PublicViewTests.test_changed_task) ... ok
+test_exact_regeneration (test_public_view.PublicViewTests.test_exact_regeneration) ... ok
+test_fake_approval_record (test_public_view.PublicViewTests.test_fake_approval_record) ... ok
+test_false_approval (test_public_view.PublicViewTests.test_false_approval) ... ok
+test_missing_task (test_public_view.PublicViewTests.test_missing_task) ... ok
+test_path_escape (test_public_view.PublicViewTests.test_path_escape) ... ok
+test_private_directory_rejected (test_public_view.PublicViewTests.test_private_directory_rejected) ... ok
+test_prompt_tampering (test_public_view.PublicViewTests.test_prompt_tampering) ... ok
+test_public_view (test_public_view.PublicViewTests.test_public_view) ... ok
+test_refuses_edited_task_overwrite (test_public_view.PublicViewTests.test_refuses_edited_task_overwrite) ... ok
+test_wrong_epub (test_public_view.PublicViewTests.test_wrong_epub) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.611s
+
+OK

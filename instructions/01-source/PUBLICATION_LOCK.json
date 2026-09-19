@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "catalog_sha256": "ed50424f198857c4c3822b62c9e9f5aa3f7b1f86ddd92dd69641c453752d0b65",
+  "ordered_task_ids_sha256": "bea30946071adb6228d95f650c48f5c44c6827d9be9c0830eeeafdebd6352dfe",
+  "source_epub_sha256": "48295c01e8fef21098a10c3fa7b17eafe7830854614c5d882c978cfbceda6c7a",
+  "private_word_sha256": "0f2df7b2703d99cca4ea40596ccebf310c16c820277e081ad5ecf56f4c45a026",
+  "expected_task_count": 1138,
+  "semantic_approval": false
+}

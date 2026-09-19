@@ -1,0 +1,25 @@
+{
+  "scope": "public task view and prompt integrity only",
+  "passed": true,
+  "task_count": 1138,
+  "category_counts": {
+    "sections": 369,
+    "equation_images": 653,
+    "snippets": 100,
+    "ancillary_documents": 16
+  },
+  "errors": [],
+  "private_word_pixel_audit": "NOT_RUN",
+  "semantic_approval": false,
+  "mathematical_approval": false,
+  "source_locators": {
+    "scope": "locked EPUB and public source locators",
+    "passed": true,
+    "source_sha256": "48295c01e8fef21098a10c3fa7b17eafe7830854614c5d882c978cfbceda6c7a",
+    "locators_checked": 1138,
+    "documents_checked": 38,
+    "errors": [],
+    "semantic_approval": false,
+    "mathematical_approval": false
+  }
+}

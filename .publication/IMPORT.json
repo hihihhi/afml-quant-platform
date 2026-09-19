@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "seed_sha256": "03b29cca383d3637df3729a476787a305b4c66c9ec4b5c50231a60e62aa8f949",
+  "seed_file_count": 29,
+  "materialized_file_count": 1169,
+  "task_count": 1138,
+  "semantic_approval": false,
+  "mathematical_approval": false,
+  "runtime_scope": "non-trading scaffold"
+}
