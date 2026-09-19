@@ -10,7 +10,7 @@ Markdown is a task layer, never a substitute for reading the corresponding sourc
 
 ## Independent checks, not repeated assertions
 
-The producer inventories with lxml. `tools/crosscheck.py` independently reads the
+The producer inventories with lxml. `tools/source_build/crosscheck.py` independently reads the
 EPUB with the standard-library XML parser and compares source order, headings,
 page markers, image placements, MathML counts, tables, snippet titles and complete
 visible text against the inventories and Word output. It also checks prompt locks,
@@ -93,3 +93,12 @@ Report counts separately for preserved, drafted, source-reviewed, mathematically
 reviewed, implemented, tested and approved. Keep unticked gates visible. Passing
 this audit does not make the platform implemented, profitable, production-ready,
 deployable or mathematically infallible. Live trading is outside this phase.
+
+## Rebuilding the private preservation package
+
+The source-rich Word and Markdown generator is available in this repository, but
+its output must remain private. Follow `instructions/01-source/PRIVATE_REBUILD.md` in the public project.
+The wrapper builds under `instructions/01-source/private/rebuilds/`, checks the
+locked edition and all numbered-section descriptions, then runs the independent
+source/Word/Markdown audit. It never replaces the public task projection.
+A new Word export remains visually unapproved until every rendered page is reviewed.

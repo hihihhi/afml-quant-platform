@@ -1,2 +1,4 @@
-# Documentation and source-locator tools only; not backend runtime dependencies.
+# Source parsing, image pixel comparison and Word export; tests never need a licensed book.
 lxml>=5,<7
+Pillow>=10,<13
+python-docx>=1,<2

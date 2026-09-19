@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "scope": "Full private source/Word/draft preservation rebuild",
+  "source_epub_sha256": "48295c01e8fef21098a10c3fa7b17eafe7830854614c5d882c978cfbceda6c7a",
+  "spine_document_count": 38,
+  "word_sha256": "25f0f04cecb51c2acac1012f56f632efcddc14fe312a807630454400ce71a270",
+  "word_image_placements": 854,
+  "task_count": 1138,
+  "structural_checks": 72,
+  "structural_checks_passed": true,
+  "visual_review": "NOT_RUN_FOR_THIS_REBUILD",
+  "independent_semantic_approval": false,
+  "independent_mathematical_approval": false,
+  "public_tasks_modified": false,
+  "tool_sha256": {
+    "instructions/tools/rebuild_private_source.py": "af4d5528013a3b80a5e18fd897351949d71a496e55fd622a82f3566b81fc19cb",
+    "instructions/tools/source_build/__init__.py": "d5ade0a4910a90f9846cb8c71b38bf0f6c03c1bc8d124a006a1e6e58b771e9c1",
+    "instructions/tools/source_build/build_book_checklists.py": "6c552f6a970e927cb0e690c9a17ace299306cce7ebce476690e81aa38b743c93",
+    "instructions/tools/source_build/crosscheck.py": "d4c285dc7117207fac5310993a3ad69276a8e74dbe4e0967c70f48cdd06d7011",
+    "instructions/tools/source_build/export_word.py": "61cd39c0d3dc72b99b936d45a906a193c08a01113024f8ee457eb9db4f6f4cc8",
+    "instructions/tools/source_build/inventory_epub.py": "e723543139250c488d2722174c45e5af608d18c80933ce1cfe75c2f8e8eedfb1"
+  },
+  "execution": "Local integration with the actual uploaded EPUB; not a GitHub Actions source run.",
+  "source_files_published": false
+}
