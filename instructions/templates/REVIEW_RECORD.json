@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "S-0.0",
+  "status": "draft",
+  "implementer": "",
+  "reviewer": "",
+  "source_epub_sha256": "",
+  "specification_path": "",
+  "specification_sha256": "",
+  "gates": {
+    "source_review": {"state": "pending", "reason": "", "evidence": []},
+    "math_review": {"state": "pending", "reason": "", "evidence": []},
+    "reference": {"state": "pending", "reason": "", "evidence": []},
+    "native": {"state": "pending", "reason": "", "evidence": []},
+    "performance": {"state": "pending", "reason": "", "evidence": []}
+  },
+  "child_task_ids": [],
+  "blockers": [],
+  "decisions": [],
+  "evidence_format": {"path": "relative repository path", "sha256": "hash of evidence file", "description": "what the evidence actually proves"},
+  "child_reviews": [],
+  "child_review_format": {"task_id": "exact child task ID", "path": "relative child review record path", "sha256": "SHA-256 of child record bytes"}
+}

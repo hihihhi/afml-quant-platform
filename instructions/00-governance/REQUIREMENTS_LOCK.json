@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "authority_files": {
+    "instructions/00-governance/INITIAL_PROMPT.md": "b13c66d8881fc50d106771fb9e7ce789f4092363d0f03908f8ca8202b174aa80",
+    "instructions/00-governance/FOLLOWUP_PROMPT.md": "84c16db5adbbd7b5027ba4e98aa82d7919d19f612974ad26946579579f5f91c0",
+    "instructions/00-governance/CONTINUATION_DIRECTIVE.md": "72d19bb226206e52717d1cf23c918319be7f5d4c52492f292cea2be2c14fcc17"
+  },
+  "source_epub_sha256": "48295c01e8fef21098a10c3fa7b17eafe7830854614c5d882c978cfbceda6c7a",
+  "required_requirement_ids": ["U001", "U002", "U003", "U004", "U005", "U006", "U007", "U008", "U009", "U010", "U011", "U012", "U013", "U014", "U015", "U016", "U017", "U018", "U019", "U020", "U021", "U022", "U023", "U024", "U025", "U026", "U027", "U028", "U029"],
+  "root_directories": ["system", "instructions"],
+  "language_preference": "C++ production; C where justified; Python reference/prototype allowed",
+  "book_semantic_review_complete": false
+}
