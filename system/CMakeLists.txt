@@ -1,0 +1,47 @@
+cmake_minimum_required(VERSION 3.20)
+project(afml_quant_platform VERSION 0.1.0 LANGUAGES CXX)
+
+option(AFML_ENABLE_SANITIZERS "Enable address and undefined-behavior sanitizers" OFF)
+option(AFML_WARNINGS_AS_ERRORS "Treat compiler warnings as errors" ON)
+
+add_library(afml_build_policy INTERFACE)
+target_compile_features(afml_build_policy INTERFACE cxx_std_20)
+set(CMAKE_CXX_EXTENSIONS OFF)
+if(MSVC)
+    target_compile_options(afml_build_policy INTERFACE /W4 /permissive- /fp:strict)
+    if(AFML_WARNINGS_AS_ERRORS)
+        target_compile_options(afml_build_policy INTERFACE /WX)
+    endif()
+else()
+    target_compile_options(afml_build_policy INTERFACE
+        -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow
+        -fno-fast-math -ffp-contract=off)
+    if(AFML_WARNINGS_AS_ERRORS)
+        target_compile_options(afml_build_policy INTERFACE -Werror)
+    endif()
+    if(AFML_ENABLE_SANITIZERS)
+        target_compile_options(afml_build_policy INTERFACE
+            -fsanitize=address,undefined -fno-omit-frame-pointer)
+        target_link_options(afml_build_policy INTERFACE -fsanitize=address,undefined)
+    endif()
+endif()
+
+add_library(afml_status STATIC src/status.cpp)
+target_include_directories(afml_status PUBLIC include)
+target_link_libraries(afml_status PUBLIC afml_build_policy)
+
+add_executable(afml-platform src/main.cpp)
+target_link_libraries(afml-platform PRIVATE afml_status)
+
+include(CTest)
+if(BUILD_TESTING)
+    add_executable(afml-status-tests tests/status_tests.cpp)
+    target_link_libraries(afml-status-tests PRIVATE afml_status)
+    add_test(NAME status_contract COMMAND afml-status-tests)
+    add_test(NAME cli_status COMMAND afml-platform --status)
+    set_tests_properties(cli_status PROPERTIES PASS_REGULAR_EXPRESSION "bootstrap_only")
+    add_test(NAME rejects_live_trading COMMAND afml-platform --trade)
+    set_tests_properties(rejects_live_trading PROPERTIES WILL_FAIL TRUE)
+    add_test(NAME rejects_backtest_claim COMMAND afml-platform --backtest)
+    set_tests_properties(rejects_backtest_claim PROPERTIES WILL_FAIL TRUE)
+endif()
