@@ -1,0 +1,15 @@
+{
+  "scope": "Actual local licensed-source integration, not remote CI or semantic approval",
+  "passed": true,
+  "source_epub_sha256": "48295c01e8fef21098a10c3fa7b17eafe7830854614c5d882c978cfbceda6c7a",
+  "packet_sha256": "791b366f8e3fdf28f8198623fae87c6507c19ac7ef8a7e17d636a542bdf1a7c1",
+  "checks": [
+    "Actual EPUB and Word installed with edition hashes",
+    "All three complete authority documents retained",
+    "All four project contracts retained",
+    "Entire original chapter XHTML retained",
+    "Catalog and task/index deterministic regeneration checked",
+    "Output kept in Git-ignored private task-context"
+  ],
+  "private_packet_published": false
+}
